@@ -3,145 +3,100 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-
 const perguntas = [
     {
-        enunciado: "Ao atravessar o portal que apareceu em sua escola, você se encontra em uma dimensão onde a gravidade é diferente. Você flutua levemente e vê uma criatura mais bizarra que qualquer pessoa da sua turma, ainda mais que people. O que você faz?",
+        enunciado: "Ao atravessar o misterioso portal que surgiu em sua escola, você se encontra em uma dimensão dividida entre o 'Lado de Lá' e o 'Lado de Cá'. Do 'Lado de Lá', a natureza prospera em harmonia com seus habitantes, enquanto o 'Lado de Cá' está mergulhado em poluição e devastação ambiental. O que você decide fazer diante dessa realidade?",
         alternativas: [
             {
-                texto: "Tenta se  comunicar com a criatura.",
-                afirmacao: [
-                    "Ao atravessar o portal, se depara com uma criatura estranha, e ao gritar 'quem é você', a criatura responde e um entendimento começa a se formar."
-                ],
+                texto: "Explorar o 'Lado de Cá' para entender as causas da degradação.",
+                afirmacao: "Determinou-se a investigar o 'Lado de Cá', onde a natureza clama por socorro em meio ao caos urbano.",
             },
             {
-                texto: "Fica calado e observar a criatura de longe.",
-                afirmacao: [
-                    "Ao atravessar o portal, se depara com uma criatura estranha e decide manter uma distância segura para estudar a criatura.",
-                ],
+                texto: "Dirigir-se ao 'Lado de Lá' para aprender sobre suas práticas sustentáveis.",
+                afirmacao: "Atraído pela beleza do 'Lado de Lá', você decide descobrir os segredos de sua harmonia ambiental.",
             }
         ]
     },
     {
-        enunciado: "Você decide ir para outro lugar, mas acaba percebendo que o tempo parece estar congelado somente em locais infestados de cogumelos. Você também percebe que tem vários cadáveres de seres vivos com esses cogumelos brotando de seus corpos. Qual é a sua reação?",
+        enunciado: "Enquanto explora, você percebe que no 'Lado de Cá' os rios estão contaminados e o ar é pesado. Já no 'Lado de Lá', a água é cristalina e o ar puro. Como você reage a essa diferença tão marcante?",
         alternativas: [
             {
-                texto: "Verificar os cadáveres para ver se encontra uma resposta.",
-                afirmacao: [
-                    "Cansado de tanto observar a criatura, decide analisar os cadáveres que estão espalhados pelos cantos. Esses cadáveres aparentam estar infectados.",
-                ],
+                texto: "Organizar uma campanha de conscientização ambiental no 'Lado de Cá'.",
+                afirmacao: "Mobilizou-se para educar os habitantes sobre a importância da preservação ambiental.",
             },
             {
-                texto: "Correr para o mais longe possível.",
-                afirmacao: [
-                    "Enquanto olhava a criatura, percebeu que à esquerda de onde estava havia vários cadáveres em um mar de cogumelos. Assustado com tudo isso, correu para o mais longe que conseguiu.",
-                ],
+                texto: "Observar e documentar as práticas do 'Lado de Lá' para replicá-las.",
+                afirmacao: "Com um caderno em mãos, registrou cada detalhe das técnicas sustentáveis utilizadas.",
             }
         ]
     },
     {
-        enunciado: "Ao continuar explorando, você chega a um vale dominado por uma vegetação exótica e luminosa. O ar está carregado de energia e você sente que algo antigo e poderoso está escondido por ali. Como você decide proceder?",
+        enunciado: "Durante suas investigações, você descobre que o 'Lado de Lá' utiliza energias renováveis e sistemas de reciclagem eficientes. Já o 'Lado de Cá' depende de combustíveis fósseis e descarta resíduos de forma inadequada. Qual é o seu próximo passo?",
         alternativas: [
             {
-                texto: "Investigar a vegetação em busca de pistas sobre a fonte de energia.",
-                afirmacao: [
-                    "A vegetação parece reagir à sua presença, conduzindo-o a um antigo artefato escondido no coração do vale.",
-                ],
+                texto: "Propor a implementação de energias limpas no 'Lado de Cá'.",
+                afirmacao: "Apresentou projetos de energia solar e eólica, mostrando seus benefícios a longo prazo.",
             },
             {
-                texto: "Procurar um caminho que leve diretamente à árvore coração da dimensão.",
-                afirmacao: [
-                    "Seguir um caminho estreito entre a vegetação leva a um portal que se abre para uma visão direta da árvore coração da dimensão.",
-                ],
+                texto: "Ensinar técnicas de reciclagem e redução de resíduos aos moradores do 'Lado de Cá'.",
+                afirmacao: "Organizou oficinas práticas, transformando lixo em arte e utilidades.",
             }
         ]
     },
     {
-        enunciado: "A vegetação começa a ficar mais densa e escura, e você encontra um grupo de moradores locais, visivelmente aflitos. Eles estão tentando conter a propagação dos cogumelos. O que você faz?",
+        enunciado: "Ao ver os primeiros sinais de mudança no 'Lado de Cá', você se depara com líderes relutantes que resistem às novas ideias por medo de custos e mudanças. Como você lida com essa resistência?",
         alternativas: [
             {
-                texto: "Oferecer ajuda aos moradores para conter a infestação.",
-                afirmacao: [
-                    "Trabalhar junto com os moradores fortalece seu vínculo com eles, e você aprende mais sobre os métodos de contenção dos cogumelos.",
-                ],
+                texto: "Demonstrar os benefícios econômicos a longo prazo das práticas sustentáveis.",
+                afirmacao: "Apresentou dados e exemplos que comprovam a viabilidade econômica das soluções verdes.",
             },
             {
-                texto: "Perguntar aos moradores sobre um caminho alternativo até a árvore coração da dimensão.",
-                afirmacao: [
-                    "Os moradores indicam um caminho secreto que contorna as áreas mais perigosas e infestadas.",
-                ],
+                texto: "Envolver a comunidade em projetos-piloto para mostrar resultados práticos.",
+                afirmacao: "Liderou projetos comunitários que rapidamente mostraram melhorias ambientais e sociais.",
             }
         ]
     },
     {
-        enunciado: "Seguindo o caminho indicado pelos moradores, você encontra uma caverna oculta que emite uma luz intensa. Ao entrar, você percebe que essa caverna é um ponto de convergência de energia. O que você faz?",
+        enunciado: "Com as mudanças em andamento, a conexão entre os dois lados começa a se fortalecer. Os habitantes do 'Lado de Lá' oferecem ajuda e conhecimento. Como você aproveita essa colaboração?",
         alternativas: [
             {
-                texto: "Explorar a caverna em busca de itens ou pistas que possam ajudar na sua jornada.",
-                afirmacao: [
-                    "Dentro da caverna, vários cristais energizados são encontrados, cada um com propriedades únicas que podem ser usadas contra a infestação.",
-                ],
+                texto: "Organizar intercâmbios culturais e educacionais entre os dois lados.",
+                afirmacao: "Promoveu eventos onde conhecimentos e culturas foram compartilhados, enriquecendo a todos.",
             },
             {
-                texto: "Usar a energia da caverna para se fortalecer antes de continuar a jornada.",
-                afirmacao: [
-                    "A energia da caverna infunde seu corpo, aumentando suas habilidades e resistência contra os cogumelos.",
-                ],
+                texto: "Implementar projetos conjuntos de reflorestamento e limpeza de rios.",
+                afirmacao: "Juntos, os habitantes plantaram árvores e revitalizaram corpos d'água, restaurando a natureza.",
             }
         ]
     },
     {
-        enunciado: "Ao sair da caverna, você se depara com um campo de batalha antigo, onde vestígios de uma luta passada contra a infestação de cogumelos estão espalhados. O que você faz?",
+        enunciado: "A transformação do 'Lado de Cá' começa a chamar atenção, e outros mundos mostram interesse em aprender com essa experiência. Como você decide compartilhar essa história de sucesso?",
         alternativas: [
             {
-                texto: "Examinar os vestígios para aprender com as batalhas passadas.",
-                afirmacao: [
-                    "Os vestígios revelam táticas antigas e eficazes contra a infestação, que podem ser utilizadas na batalha final.",
-                ],
+                texto: "Criar um documentário destacando os desafios e conquistas da jornada.",
+                afirmacao: "Dirigiu um documentário inspirador que se tornou referência em sustentabilidade.",
             },
             {
-                texto: "Buscar uma rota segura através do campo de batalha para evitar novos confrontos.",
-                afirmacao: [
-                    "Uma rota segura é traçada, evitando áreas perigosas e infestadas.",
-                ],
+                texto: "Escrever um guia prático de sustentabilidade baseado nas iniciativas implementadas.",
+                afirmacao: "Compilou conhecimentos em um guia acessível, facilitando a replicação das práticas.",
             }
         ]
     },
     {
-        enunciado: "Finalmente, você chega à área onde a árvore coração da dimensão está localizada. No entanto, o local está cercado por cogumelos gigantes e agressivos que parecem estar sugando sua energia. Qual é a sua estratégia?",
+        enunciado: "Com a missão cumprida e os dois lados agora trabalhando em harmonia com o meio ambiente, o portal de retorno à sua escola começa a se formar. Qual é a sua decisão final?",
         alternativas: [
             {
-                texto: "Usar as habilidades e itens adquiridos para combater os cogumelos e proteger a árvore.",
-                afirmacao: [
-                    "Os cristais energizados e o artefato antigo são usados com sucesso para combater os cogumelos.",
-                ],
+                texto: "Agradecer a todos e retornar, levando consigo as lições aprendidas.",
+                afirmacao: "Despediu-se com gratidão, prometendo aplicar os ensinamentos em sua própria realidade.",
             },
             {
-                texto: "Buscar uma forma de redirecionar a energia da árvore para repelir os cogumelos.",
-                afirmacao: [
-                    "A energia da árvore é redirecionada de maneira eficaz, criando uma barreira que impede os cogumelos de se aproximarem.",
-                ],
-            }
-        ]
-    },
-    {
-        enunciado: "Com a infestação contida e a árvore coração da dimensão protegida, você percebe que a energia ao redor começou a estabilizar. Os portais de saída começam a se formar. O que você faz?",
-        alternativas: [
-            {
-                texto: "Agradecer aos moradores e se preparar para retornar à sua dimensão.",
-                afirmacao: [
-                    "Os moradores expressam sua gratidão e fornecem itens que podem ser úteis no futuro.",
-                ]
-            },
-            {
-                texto: "Pedir aos moradores para aprender mais sobre a dimensão antes de partir.",
-                afirmacao: [
-                    "Os moradores compartilham histórias antigas e conhecimentos profundos sobre a dimensão.",
-                ]
+                texto: "Decidir ficar mais tempo para assegurar que as mudanças sejam duradouras.",
+                afirmacao: "Optou por permanecer, dedicando-se a consolidar as transformações iniciadas.",
             }
         ]
     }
 ];
+
 
 let atual = 0; 
 let perguntaAtual;
